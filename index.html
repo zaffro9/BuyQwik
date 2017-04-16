@@ -1,6 +1,100 @@
+<!DOCTYPE html>
 <html>
-<header><title>This is title</title></header>
+<head>
+<meta charset="UTF-8">
+<title>BuyQwik</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="styles/custom-theme.min.css" />
+<link rel="stylesheet" href="styles/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
 <body>
-Hello world
+<div id="page" data-role="page" data-theme="a">
+  <div data-role="header" data-theme="a">
+    <div class="logo"><h2>BuyQwik</h2></div>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview" data-theme="a">
+      <li><a href="#buy" data-transition="slide">Buy</a></li>
+      <li><a href="#sell" data-transition="slide">Sell</a></li>
+      <li><a href="#profile" data-transition="slide">Profile</a></li>
+      <li><a href="#account" data-transition="slide">Account</a></li>
+      <li><a href="#settings" data-transition="slide">Settings</a></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-theme="a">
+    <h4>BuyQwik &copy; 2017</h4>
+  </div>
+</div>
+<div id="buy" data-role="page">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Buy</h1>
+  </div>
+  <div data-role="content">
+    <h3>Products</h3>
+	<ul>
+		<li>Product 1</li>
+		<li>Product 2</li>
+		<li>Product 3</li>
+		<li>Product 4</li>
+		<li>Product 5</li>
+	</ul>
+  </div>
+  <div data-role="footer">
+    <h4>BuyQwik &copy; 2017</h4>
+  </div>
+</div>
+<div id="sell" data-role="page">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Sell</h1>
+  </div>
+  <div data-role="content">
+    <p>Product questions around what the user wants to sell would appear here</p>
+  </div>
+  <div data-role="footer" data-theme="a">
+    <h4>BuyQwik &copy; 2017</h4>
+  </div>
+</div>
+<div id="profile" data-role="page">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Profile</h1>
+  </div>
+	<div data-role="content">
+		Profile information to be listed here
+	</div>
+  <div data-role="footer">
+    <h4>BuyQwik &copy; 2017</h4>
+  </div>
+</div>
+<div data-role="page" id="account">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Account</h1>
+  </div>
+  <form method="post" action="/action_page_post.php">
+  <div>
+    <label for="fullname">Full name:</label>
+    <input type="text" name="fullname" id="fullname">
+
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" placeholder="Your email..">
+  </div>
+</form>
+  <div data-role="footer" >
+    <h4>BuyQwik &copy; 215</h4>
+  </div>
+</div>
+<div data-role="page" id="settings">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Settings</h1>
+  </div>
+  <div data-role="content">
+   <p>Some settings to appear hear in the future</p>
+  </div>
+  <div data-role="footer" data-theme="a">
+    <h4>BuyQwik &copy; 2017</h4>
+  </div>
+</div>
 </body>
 </html>

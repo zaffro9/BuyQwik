@@ -13,7 +13,9 @@
 <body>
 <div id="page" data-role="page" data-theme="a">
   <div data-role="header" data-theme="a">
-    <div class="logo"><h2>BuyQwik</h2></div>
+    <div class="logo">
+      <h2>BuyQwik</h2>
+    </div>
   </div>
   <div data-role="content">
     <ul data-role="listview" data-theme="a">
@@ -34,13 +36,13 @@
   </div>
   <div data-role="content">
     <h3>Products</h3>
-	<ul>
-		<li>Product 1</li>
-		<li>Product 2</li>
-		<li>Product 3</li>
-		<li>Product 4</li>
-		<li>Product 5</li>
-	</ul>
+    <ul>
+      <li>Product 1</li>
+      <li>Product 2</li>
+      <li>Product 3</li>
+      <li>Product 4</li>
+      <li>Product 5</li>
+    </ul>
   </div>
   <div data-role="footer">
     <h4>BuyQwik &copy; 2017</h4>
@@ -51,7 +53,22 @@
     <h1>Sell</h1>
   </div>
   <div data-role="content">
-    <p>Product questions around what the user wants to sell would appear here</p>
+    <div data-role="fieldcontain">
+      <form>
+        <label for="productName">Product Name</label>
+        <input type="text" name="productName" id="productName">
+        <label for="prodDesc">Product Description:</label>
+        <textarea id="prodDesc" name="prodDesc" placeholder="Product Description">
+        </textarea>
+		  <label for="condition">Condition:</label>
+        <select id="condition" name="condition">
+        	<option value="new">New</option>
+        	<option value="new">Good</option>
+        	<option value="new">Fair</option>
+        	<option value="new">Poor</option>
+        </select>
+      </form>
+    </div>
   </div>
   <div data-role="footer" data-theme="a">
     <h4>BuyQwik &copy; 2017</h4>
@@ -61,9 +78,7 @@
   <div data-role="header" data-theme="a" data-add-back-btn="true">
     <h1>Profile</h1>
   </div>
-	<div data-role="content">
-		Profile information to be listed here
-	</div>
+  <div data-role="content"> Profile information to be listed here </div>
   <div data-role="footer">
     <h4>BuyQwik &copy; 2017</h4>
   </div>
@@ -72,15 +87,23 @@
   <div data-role="header" data-theme="a" data-add-back-btn="true">
     <h1>Account</h1>
   </div>
-  <form method="post" action="/action_page_post.php">
-  <div>
-    <label for="fullname">Full name:</label>
-    <input type="text" name="fullname" id="fullname">
-
-    <label for="email">E-mail:</label>
-    <input type="email" name="email" id="email" placeholder="Your email..">
+  <div data-role="fieldcontain">
+    <form>
+      <label for="fullname">Full name:</label>
+      <input type="text" name="fullname" id="fullname">
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" placeholder="Your email..">
+      <fieldset data-type="horizontal" data-role="controlgroup">
+        <legend>Profile Visibility:</legend>
+        <label for="profilePublic">Public</label>
+        <input id="profilePublic" name="promo" type="radio" value="yes">
+        <label for="profilePrivate">Private</label>
+        <input id="profilePrivate" name="promo" type="radio" value="no">
+      </fieldset>
+      <label for="promoEmails">Opt-in to promotional emails</label>
+      <input type="checkbox" id="promoEmails" checked>
+    </form>
   </div>
-</form>
   <div data-role="footer" >
     <h4>BuyQwik &copy; 215</h4>
   </div>
@@ -90,7 +113,7 @@
     <h1>Settings</h1>
   </div>
   <div data-role="content">
-   <p>Some settings to appear hear in the future</p>
+    <p>Some settings to appear hear in the future</p>
   </div>
   <div data-role="footer" data-theme="a">
     <h4>BuyQwik &copy; 2017</h4>
